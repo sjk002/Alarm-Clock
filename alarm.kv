@@ -1,0 +1,78 @@
+#:kivy 1.10.1
+
+<AlarmClock>
+
+    hlabel: hourlabel
+    mlabel: minlabel
+    apbutton: ampmbutton
+    startbutton: runbutton
+
+    Label: 
+        font_size: 70
+        center_x: root.width / 2
+        top: root.top - 50
+        text: "Alarm Clock"
+
+    Label:
+        id: hourlabel
+        font_size: 50
+        text: '1'
+        x: root.width / 3 - 48
+        center_y: root.center_y
+
+    Button:
+        id: phbutton
+        center_x: root.width / 3
+        center_y: root.center_y + 60
+        text: "+"
+        size: 35,35
+        on_release: root.hourplus()
+
+    Button:
+        id: mhbutton
+        center_x: root.width / 3
+        center_y: root.center_y - 60
+        text: "-"
+        size: 35,35
+        on_release: root.hourminus()
+
+    Label:
+        id: minlabel
+        font_size: 50
+        text: '00'
+        center_x: root.center_x
+        center_y: root.center_y
+
+    Button:
+        id: pmbutton
+        center_x: root.center_x
+        center_y: root.center_y + 60
+        text: "+"
+        size: 35,35
+        on_release: root.minplus()
+
+    Button:
+        id: mmbutton
+        center_x: root.center_x
+        center_y: root.center_y - 60
+        text: "-"
+        size: 35,35
+        on_release: root.minminus()
+
+    Button:
+        id: ampmbutton
+        center_x: root.width * 2 / 3
+        center_y: root.center_y 
+        text: "AM"
+        size: 50,50
+        on_release: root.ampm()
+
+    Button:
+        id: runbutton
+        font_size: 70
+        text: "Start"
+        center_x: root.width / 2
+        top: root.height / 4
+        size: 200, 75
+        on_release: root.start()
+        
