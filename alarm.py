@@ -4,7 +4,7 @@ from kivy.properties import (
     NumericProperty, ReferenceListProperty, ObjectProperty
 )
 from kivy.clock import Clock
-import datetime
+from datetime import datetime
 
 class AlarmClock(Widget):
     def hourplus(self):
@@ -61,7 +61,7 @@ class AlarmClock(Widget):
         while True:
 
 
-            if (int(self.hlabel.text) == datetime.now().strftime("%H") and int(self.mlabel.text) == datetime.now().strftime("%M")):
+            if (int(self.hlabel.text) == int(datetime.now().strftime("%H")) and int(self.mlabel.text) == int(datetime.now().strftime("%M"))):
                 print("good stuff")
                 break
 
